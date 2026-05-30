@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "philosophy": "Philosophy",
+    "products": "Products",
+    "about": "About"
+  },
+  "hero": {
+    "subtitle": "Stop waiting. Start now.",
+    "cta": "Explore Method"
+  },
+  "philosophy": {
+    "heading": "Change starts with the smallest step",
+    "card1": {
+      "title": "Tiny Cues",
+      "desc": "Design environmental cues that make good habits happen naturally. Start with one small signal to trigger a chain of positive actions."
+    },
+    "card2": {
+      "title": "Habit Stacking",
+      "desc": "Link new behaviors to existing habits, reducing the friction to start. Layer by layer, let change blend into your daily rhythm."
+    },
+    "card3": {
+      "title": "Identity Shift",
+      "desc": "Don't just change behavior — become who you want to be. Every choice is a vote for your ideal identity."
+    }
+  },
+  "products": {
+    "heading": "Ritual Essentials",
+    "intro": "Curated objects to support your habit-building journey",
+    "disclaimer": "These are curated recommendations, not required purchases. You're free to choose alternatives that suit you."
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

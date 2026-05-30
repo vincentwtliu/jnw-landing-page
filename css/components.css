@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Components — Reusable component styles (buttons, cards, navigation)
+   ========================================================================== */
+
+/* ---- Navigation Bar ---- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nav--scrolled {
+  background-color: rgba(26, 26, 26, 0.95);
+  box-shadow: var(--shadow-md);
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.nav__logo {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: var(--font-weight-light);
+  color: var(--color-primary-light);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
+}
+
+.nav__logo:hover {
+  color: var(--color-accent);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.nav__links a {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-light);
+  text-decoration: none;
+  position: relative;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-fast);
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-fast);
+}
+
+.nav__links a:hover {
+  color: var(--color-accent);
+}
+
+.nav__links a:hover::after {
+  width: 100%;
+}
+
+.nav__links a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Language Toggle Button ---- */
+.lang-toggle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-light);
+  background: none;
+  border: 1px solid rgba(250, 250, 250, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.lang-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Hamburger Toggle Button ---- */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: var(--space-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-primary-light);
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Hamburger → X animation */
+.nav__toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav__toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Mobile Menu Overlay ---- */
+.nav__links--mobile-open {
+  position: fixed;
+  inset: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  background-color: rgba(26, 26, 26, 0.98);
+  z-index: 999;
+}
+
+.nav__links--mobile-open a {
+  font-size: var(--font-size-h2);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-light);
+}
+
+/* ---- Product Card ---- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-medium);
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+.product-card__image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-neutral-warm);
+}
+
+.product-card__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--transition-fast);
+}
+
+/* Image error fallback placeholder */
+.product-card__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-warm);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.product-card__placeholder span {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  color: var(--color-accent);
+  opacity: 0.3;
+  letter-spacing: 0.1em;
+}
+
+/* Hide placeholder when image loads successfully */
+.product-card__image img.loaded ~ .product-card__placeholder {
+  display: none;
+}
+
+.product-card__info {
+  padding: var(--space-sm) var(--space-sm) var(--space-md);
+  text-align: left;
+}
+
+.product-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-light);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.product-card__desc {
+  font-size: var(--font-size-small);
+  color: var(--color-neutral-cool);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+  max-width: none;
+}
+
+.product-card__price {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+}

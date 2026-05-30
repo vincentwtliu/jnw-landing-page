@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Responsive — Media queries and breakpoint overrides
+   ========================================================================== */
+
+/* ---- Mobile: below 768px ---- */
+@media (max-width: 767px) {
+  /* Navigation: show hamburger, hide links by default */
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  /* Language toggle: slightly smaller on mobile */
+  .lang-toggle {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  /* When mobile menu is open */
+  .nav__links--mobile-open {
+    display: flex;
+  }
+
+  .nav__container {
+    padding: var(--space-sm) var(--space-sm);
+  }
+
+  /* Hero adjustments */
+  .hero__content {
+    padding: var(--space-sm);
+  }
+
+  .hero__subtitle {
+    margin-bottom: var(--space-md);
+  }
+
+  /* Philosophy: single column on mobile */
+  .philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .philosophy__card {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  /* Products: single column on mobile */
+  .products__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  /* Footer: tighter spacing */
+  .footer__container {
+    gap: var(--space-sm);
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
+
+/* ---- Tablet: 768px to 1199px ---- */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nav__container {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  /* Products: 2 columns on tablet */
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Philosophy: keep 3 columns but reduce gap */
+  .philosophy__grid {
+    gap: var(--space-sm);
+  }
+}
+
+/* ---- Desktop: 1200px and above ---- */
+@media (min-width: 1200px) {
+  .nav__container {
+    padding: var(--space-sm) var(--space-lg);
+  }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .nav {
+    transition: none;
+  }
+
+  .nav__toggle span {
+    transition: none;
+  }
+
+  .nav__links a::after {
+    transition: none;
+  }
+
+  .hero__bg img {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Disable scroll-triggered animations */
+  .philosophy__card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .product-card {
+    transition: none;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+  .footer__social a {
+    transition: none;
+  }
+}

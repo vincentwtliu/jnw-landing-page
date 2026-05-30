@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JnW — Just go, no more waiting. 通过原子习惯方法，帮助你克服拖延，从最小的一步开始改变。">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>JnW — Just go, no more waiting</title>
+
+  <!-- Google Fonts: Nunito (light rounded) + Noto Sans SC (rounded feel) for Chinese -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Noto+Sans+SC:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS: Load order matters -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content">跳至主要内容</a>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__container">
+      <a class="nav__logo" href="#">JnW</a>
+      <nav class="nav__links" id="nav-links" aria-hidden="true">
+        <a href="#philosophy" data-i18n="nav.philosophy">理念</a>
+        <a href="#products" data-i18n="nav.products">推荐</a>
+        <a href="#footer" data-i18n="nav.about">关于</a>
+      </nav>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">EN</button>
+      <button class="nav__toggle" id="nav-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <picture class="hero__bg">
+        <source srcset="assets/images/hero-bg.webp" type="image/webp">
+        <img src="assets/images/hero-bg.jpg" alt="" loading="eager" aria-hidden="true">
+      </picture>
+      <div class="hero__content">
+        <p class="hero__subtitle">拖延，其实可以被温柔地改变</p>
+        <p class="hero__tagline">Just go, no more waiting</p>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">一念起行，不负此刻</p>
+        <a class="btn btn--primary hero__cta" href="#philosophy" data-i18n="hero.cta">探索方法</a>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy__container">
+        <p class="philosophy__story">一本《掌控习惯》，改变了我的人生轨迹。<br>曾经深陷拖延的我，找到了走出困境的方法。<br>现在，我想把这份力量分享给每一个同样在挣扎的你。</p>
+        <h2 class="philosophy__heading" data-i18n="philosophy.heading">改变，从最小的一步开始</h2>
+        <div class="philosophy__grid">
+          <article class="philosophy__card" data-animate="fade-up">
+            <div class="philosophy__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <!-- Cue/觸發: a bell/notification icon -->
+                <circle cx="24" cy="20" r="10"/>
+                <path d="M24 10V6"/>
+                <path d="M18 30h12"/>
+                <path d="M20 30v2a4 4 0 0 0 8 0v-2"/>
+                <path d="M14 20a10 10 0 0 1 20 0"/>
+                <path d="M14 20v10h20V20"/>
+              </svg>
+            </div>
+            <h3 data-i18n="philosophy.card1.title">微小触发</h3>
+            <p data-i18n="philosophy.card1.desc">设计环境中的提示，让好习惯自然发生。从一个微小的信号开始，触发正向行为的连锁反应。</p>
+          </article>
+          <article class="philosophy__card" data-animate="fade-up">
+            <div class="philosophy__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <!-- Stack/堆疊: layered blocks icon -->
+                <rect x="14" y="28" width="20" height="8" rx="2"/>
+                <rect x="14" y="18" width="20" height="8" rx="2"/>
+                <rect x="14" y="8" width="20" height="8" rx="2"/>
+                <path d="M20 8v28"/>
+                <path d="M28 8v28"/>
+              </svg>
+            </div>
+            <h3 data-i18n="philosophy.card2.title">习惯堆叠</h3>
+            <p data-i18n="philosophy.card2.desc">将新行为连结到既有习惯，降低启动阻力。一层一层堆叠，让改变自然融入日常节奏。</p>
+          </article>
+          <article class="philosophy__card" data-animate="fade-up">
+            <div class="philosophy__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <!-- Identity/身份: person with upward arrow icon -->
+                <circle cx="24" cy="16" r="6"/>
+                <path d="M16 38c0-6 4-10 8-10s8 4 8 10"/>
+                <path d="M24 6V2"/>
+                <path d="M21 4l3-2 3 2"/>
+              </svg>
+            </div>
+            <h3 data-i18n="philosophy.card3.title">身份转变</h3>
+            <p data-i18n="philosophy.card3.desc">不只改变行为，而是成为你想成为的人。每一次选择，都在投票给你理想中的身份。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <div class="products__container">
+        <h2 class="products__heading" data-i18n="products.heading">仪式感选品</h2>
+        <p class="products__intro" data-i18n="products.intro">精选辅助习惯养成的生活物件</p>
+        <div class="products__grid">
+          <a class="product-card" href="https://example.com/bracelet" target="_blank" rel="noopener noreferrer">
+            <div class="product-card__image">
+              <picture>
+                <source srcset="assets/images/products/bracelet.webp" type="image/webp">
+                <img src="assets/images/products/bracelet.jpg" alt="意念手环" loading="lazy">
+              </picture>
+              <div class="product-card__placeholder" aria-hidden="true">
+                <span>JnW</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">意念手环</h3>
+              <p class="product-card__desc">每日触碰提醒，启动你的微习惯仪式</p>
+              <span class="product-card__price">¥295</span>
+            </div>
+          </a>
+          <a class="product-card" href="https://example.com/candle" target="_blank" rel="noopener noreferrer">
+            <div class="product-card__image">
+              <picture>
+                <source srcset="assets/images/products/candle.webp" type="image/webp">
+                <img src="assets/images/products/candle.jpg" alt="专注香氛蜡烛" loading="lazy">
+              </picture>
+              <div class="product-card__placeholder" aria-hidden="true">
+                <span>JnW</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">专注香氛蜡烛</h3>
+              <p class="product-card__desc">点燃即进入专注模式的嗅觉锚点</p>
+              <span class="product-card__price">¥226</span>
+            </div>
+          </a>
+          <a class="product-card" href="https://example.com/journal" target="_blank" rel="noopener noreferrer">
+            <div class="product-card__image">
+              <picture>
+                <source srcset="assets/images/products/journal.webp" type="image/webp">
+                <img src="assets/images/products/journal.jpg" alt="习惯追踪手帐" loading="lazy">
+              </picture>
+              <div class="product-card__placeholder" aria-hidden="true">
+                <span>JnW</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">习惯追踪手帐</h3>
+              <p class="product-card__desc">视觉化你的每日进步与习惯连续纪录</p>
+              <span class="product-card__price">¥157</span>
+            </div>
+          </a>
+          <a class="product-card" href="https://example.com/essential-oil" target="_blank" rel="noopener noreferrer">
+            <div class="product-card__image">
+              <picture>
+                <source srcset="assets/images/products/essential-oil.webp" type="image/webp">
+                <img src="assets/images/products/essential-oil.jpg" alt="晨间精油" loading="lazy">
+              </picture>
+              <div class="product-card__placeholder" aria-hidden="true">
+                <span>JnW</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">晨间精油</h3>
+              <p class="product-card__desc">清新气息开启早晨的第一个好习惯</p>
+              <span class="product-card__price">¥173</span>
+            </div>
+          </a>
+        </div>
+        <p class="products__disclaimer" data-i18n="products.disclaimer">以上为精选推荐，非强制购买。你也可以选择其他适合自己的产品。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">JnW</span>
+        <p class="footer__tagline">Just go, no more waiting</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer__links">
+        <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+        <a href="terms.html" data-i18n="footer.terms">服务条款</a>
+      </div>
+      <p class="footer__copyright">&copy; 2025 JnW. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/language.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

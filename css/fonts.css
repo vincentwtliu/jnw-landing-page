@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Font Configuration
+   ========================================================================== */
+
+/*
+   Fonts are loaded via Google Fonts CDN in index.html <head>:
+   - Noto Serif SC (200, 300, 400) — Chinese headings, elegant thin serif
+   - Noto Sans SC (100, 200, 300, 400) — Chinese body, ultra-light sans-serif
+   - Cormorant Garamond (300, 400, 600) — English brand name, light serif
+
+   No local @font-face declarations needed.
+   Google Fonts handles subsetting and delivery automatically.
+*/

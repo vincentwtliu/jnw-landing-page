@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Design Tokens — Colors, Typography, Spacing
+   ========================================================================== */
+
+:root {
+  /* ---- Color Palette (5 colors) ----
+     WCAG 2.1 AA Contrast Verification:
+     ✓ primary-dark on primary-light: 16.67:1 (body text — passes 4.5:1)
+     ✓ primary-dark on neutral-warm:  15.37:1 (body text — passes 4.5:1)
+     ✓ neutral-cool on primary-light:  5.11:1 (secondary text — passes 4.5:1)
+     ✓ neutral-cool on neutral-warm:   4.71:1 (secondary text — passes 4.5:1)
+     ✓ primary-dark on accent:         7.78:1 (CTA button text — passes 4.5:1)
+     ✓ accent on primary-dark:         7.78:1 (large text/headings — passes 3:1)
+     ✓ primary-light on primary-dark: 16.67:1 (inverted text — passes 4.5:1)
+     ⚠ accent on primary-light:        2.14:1 (decorative only — not used for text)
+     Note: Accent color is used as background (with dark text) or on dark backgrounds,
+     never as standalone text on light backgrounds.
+  ---- */
+  --color-primary-dark: #1a1a1a;      /* Near-black for text and dark backgrounds */
+  --color-primary-light: #fafafa;     /* Off-white for light backgrounds */
+  --color-accent: #c9a96e;            /* Warm gold for CTAs and highlights */
+  --color-neutral-warm: #f5f0eb;      /* Warm cream for section backgrounds */
+  --color-neutral-cool: #6b6b6b;      /* Medium gray for secondary text */
+
+  /* ---- Typography — Font Families ---- */
+  --font-heading: 'Nunito', 'Noto Sans SC', sans-serif;   /* Rounded light sans for headings */
+  --font-body: 'Noto Sans SC', 'Nunito', sans-serif;      /* Rounded light sans for body */
+
+  /* ---- Typography — Font Sizes (fluid with clamp) ---- */
+  --font-size-hero: clamp(3rem, 8vw, 7rem);
+  --font-size-h1: clamp(2rem, 4vw, 3.5rem);
+  --font-size-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --font-size-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --font-size-body: clamp(1rem, 1.2vw, 1.125rem);
+  --font-size-small: 0.875rem;
+
+  /* ---- Typography — Font Weights ---- */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ---- Spacing Scale ---- */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+  --space-section: 120px;  /* Minimum 48px per requirement, using 120px for premium feel */
+
+  /* ---- Layout ---- */
+  --max-width: 1440px;
+  --container-padding: var(--space-sm);
+
+  /* ---- Transitions ---- */
+  --transition-fast: 300ms ease;
+  --transition-medium: 500ms ease;
+  --transition-slow: 800ms ease;
+
+  /* ---- Borders & Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
