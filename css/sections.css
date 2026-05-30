@@ -284,7 +284,7 @@
   font-size: var(--font-size-small);
   color: var(--color-neutral-cool);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: none;
   margin-bottom: 0;
   max-width: none;
 }
